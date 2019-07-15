@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 
 console.log("SERVER IS HERE")
 
+
+
+
 app.use('/', api)
 
 const port = 8888
