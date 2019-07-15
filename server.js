@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const port = 3002
 const api = require('../api')
 app.use(express.static(path.join(__dirname, '..','dist')))
-// app.use(express.static(path.join(__dirname, '..','node_modules')))
+app.use(express.static(path.join(__dirname, '..','node_modules')))
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
