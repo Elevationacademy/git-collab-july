@@ -1,0 +1,15 @@
+const express = require('express')
+const app = express()
+const path =require('path')
+const mongoose = require('mongoose')
+const port = 3002
+const api = require('../api')
+app.use(express.static(path.join(__dirname, '..','dist')))
+app.use(express.static(path.join(__dirname, '..','node_modules')))
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use('/',api)
+mongoose.connect('mongodb://localhost/weather', { useNewUrlParser: true})
+app.listen(port, function(){console.log('listeing on port ' + port)})
+
