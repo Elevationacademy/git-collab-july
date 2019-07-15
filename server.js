@@ -4,3 +4,6 @@ const port = process.env.PORT ||3000
 const path = require( 'path' )
 app.use( express.static( path.join( __dirname, 'dist' ) ) )
 app.listen( port, () => console.log( `Example app listening on port ${ port }!` ) )
+const update = function(){
+    console.log("done")
+}
