@@ -1,3 +1,7 @@
+const hackathon = "cool"
+
+
+app.mongoose = "say what?"
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
